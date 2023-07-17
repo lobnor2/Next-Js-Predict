@@ -11,19 +11,24 @@ export default function Home() {
     push(`/prediction/${inputVal}`);
   };
   return (
-    <div>
-      <div>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="text-5xl mb-5">
         <h1>Enter Your Name</h1>
       </div>
       <form action="" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="text-black"
-          placeholder="Type your name..."
+          className="text-black px-3 py-2 text-xl my-3 outline-none"
+          placeholder="Type your first name..."
           value={inputVal}
           onChange={(e) => setInputVal(e.target.value)}
         />
-        <button type="submit">Predict Data</button>
+        <button
+          type="submit"
+          className="border border-white ml-2 py-2 text-lg px-2 cursor-pointer "
+        >
+          Predict Data
+        </button>
       </form>
     </div>
   );
